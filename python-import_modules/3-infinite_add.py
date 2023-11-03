@@ -6,13 +6,13 @@ if __name__ == "__main__":
 values = sys.argv
 number = len(values)
 i = 1
+summ = 0
 if number == 1:
-    print("0 arguments.")
+    print("{:d}".format(summ))
 elif number == 2:
-    print("1 argument:")
-    print("1: {}".format(values[1]))
+    print("{:d}".format(int(values[1])))
 elif number > 2:
-    print("{:d} arguments:".format(number-1))
     while i < number:
-        print("{:d}: {}".format((i), values[i]))
+        summ = summ + int(values[i])
         i = i + 1
+    print("{:d}".format(summ))
